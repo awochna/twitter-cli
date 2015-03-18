@@ -1,0 +1,3 @@
+class TwitterCLI < Thor
+
+end
