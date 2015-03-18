@@ -1,5 +1,6 @@
+#!/usr/bin/env ruby
+
 require 'thor'
-require 'twitter'
 
 class TwitterCLI < Thor
 
@@ -9,3 +10,5 @@ class TwitterCLI < Thor
     puts "#{Time.now} Posted: #{tweet}"
   end
 end
+
+TwitterCLI.start(ARGV)
