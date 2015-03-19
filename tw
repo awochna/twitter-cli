@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require 'thor'
+require 'twitter'
+require 'yaml'
 
 class TwitterCLI < Thor
 
