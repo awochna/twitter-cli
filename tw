@@ -10,8 +10,8 @@ class TwitterCLI < Thor
   def post(tweet)
     # tweet posting logic goes here
     client = read_config
-    client.update(tweet)
-    puts "#{Time.now} Posted: #{tweet}"
+    posted_tweet = client.update(tweet)
+    puts "#{Time.now} Posted: #{posted_tweet.text}" if posted_tweet.text == tweet
   end
 
   private
