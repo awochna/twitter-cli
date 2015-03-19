@@ -17,7 +17,7 @@ class TwitterCLI < Thor
   private
 
   def read_config
-    access_tokens = YAML.load_file('access_tokens.yml')
+    access_tokens = YAML.load_file(File.join(__dir__, 'access_tokens.yml'))
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = access_tokens['consumer_api_key']
       config.consumer_secret     = access_tokens['consumer_api_secret']
